@@ -1,0 +1,64 @@
+Ψ Compiling keymap with make --jobs=1 handwired/wylderbuilds/5x6:vial                                                                                          
+                                                                                                                                                               
+                                                                                                                                                               
+QMK Firmware etsy_2976814061                                                                                                                                   
+☒ handwired/wylderbuilds/5x6: Number of keys for LAYOUT_5x6 does not match! info.json specifies 58 keys, C macro specifies 64                                  
+☒ handwired/wylderbuilds/5x6: No LAYOUTs defined! Need at least one layout defined in info.json.                                                               
+Making handwired/wylderbuilds/5x6 with keymap vial                                                                                                             
+                                                                                                                                                               
+☒ handwired/wylderbuilds/5x6: Number of keys for LAYOUT_5x6 does not match! info.json specifies 58 keys, C macro specifies 64                                  
+☒ handwired/wylderbuilds/5x6: No LAYOUTs defined! Need at least one layout defined in info.json.                                                               
+arm-none-eabi-gcc.exe (GCC) 12.2.0                                                                                                                             
+Copyright (C) 2022 Free Software Foundation, Inc.                                                                                                              
+This is free software; see the source for copying conditions.  There is NO                                                                                     
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                                                                                    
+                                                                                                                                                               
+Generating: .build/obj_handwired_wylderbuilds_5x6_vial/src/info_config.h                            [WARNINGS]                                                 
+ |                                                                                                                                                             
+ | ☒ handwired/wylderbuilds/5x6: Number of keys for LAYOUT_5x6 does not match! info.json specifies 58 keys, C macro specifies 64                               
+ | ☒ handwired/wylderbuilds/5x6: No LAYOUTs defined! Need at least one layout defined in info.json.                                                            
+ |                                                                                                                                                             
+Generating: .build/obj_handwired_wylderbuilds_5x6_vial/src/default_keyboard.c                       [WARNINGS]                                                 
+ |                                                                                                                                                             
+ | ☒ handwired/wylderbuilds/5x6: Number of keys for LAYOUT_5x6 does not match! info.json specifies 58 keys, C macro specifies 64                               
+ | ☒ handwired/wylderbuilds/5x6: No LAYOUTs defined! Need at least one layout defined in info.json.                                                            
+ |                                                                                                                                                             
+Generating: .build/obj_handwired_wylderbuilds_5x6_vial/src/default_keyboard.h                       [WARNINGS]                                                 
+ |                                                                                                                                                             
+ | ☒ handwired/wylderbuilds/5x6: Number of keys for LAYOUT_5x6 does not match! info.json specifies 58 keys, C macro specifies 64                               
+ | ☒ handwired/wylderbuilds/5x6: No LAYOUTs defined! Need at least one layout defined in info.json.                                                            
+ |                                                                                                                                                             
+Compiling: keyboards/handwired/wylderbuilds/5x6/5x6.c                                               [OK]                                                       
+Compiling: .build/obj_handwired_wylderbuilds_5x6_vial/src/default_keyboard.c                        [OK]                                                       
+Compiling: quantum/keymap_introspection.c                                                          In file included from quantum/keymap_introspection.c:5:     
+./keyboards/handwired/wylderbuilds/5x6/keymaps/vial/keymap.c:18:5: error: macro "LAYOUT_5x6" requires 64 arguments, but only 58 given                          
+   18 |     ),                                                                                                                                                 
+      |     ^                                                                                                                                                  
+In file included from ./.build/obj_handwired_wylderbuilds_5x6_vial/src/default_keyboard.h:30,                                                                  
+                 from ./keyboards/handwired/wylderbuilds/5x6/keymaps/vial/keymap.c:1:                                                                          
+keyboards/handwired/wylderbuilds/5x6/5x6.h:7: note: macro "LAYOUT_5x6" defined here                                                                            
+    7 | #define LAYOUT_5x6( \                                                                                                                                  
+      |                                                                                                                                                        
+./keyboards/handwired/wylderbuilds/5x6/keymaps/vial/keymap.c:11:17: error: 'LAYOUT_5x6' undeclared here (not in a function)                                    
+   11 |     [_QWERTY] = LAYOUT_5x6(                                                                                                                            
+      |                 ^~~~~~~~~~                                                                                                                             
+./keyboards/handwired/wylderbuilds/5x6/keymaps/vial/keymap.c:28:5: error: macro "LAYOUT_5x6" requires 64 arguments, but only 58 given                          
+   28 |     ),                                                                                                                                                 
+      |     ^                                                                                                                                                  
+keyboards/handwired/wylderbuilds/5x6/5x6.h:7: note: macro "LAYOUT_5x6" defined here                                                                            
+    7 | #define LAYOUT_5x6( \                                                                                                                                  
+      |                                                                                                                                                        
+./keyboards/handwired/wylderbuilds/5x6/keymaps/vial/keymap.c:38:5: error: macro "LAYOUT_5x6" requires 64 arguments, but only 58 given                          
+   38 |     )                                                                                                                                                  
+      |     ^                                                                                                                                                  
+keyboards/handwired/wylderbuilds/5x6/5x6.h:7: note: macro "LAYOUT_5x6" defined here                                                                            
+    7 | #define LAYOUT_5x6( \                                                                                                                                  
+      |                                                                                                                                                        
+ [ERRORS]                                                                                                                                                      
+ |                                                                                                                                                             
+ |                                                                                                                                                             
+ |                                                                                                                                                             
+make[1]: *** [builddefs/common_rules.mk:364: .build/obj_handwired_wylderbuilds_5x6_vial/quantum/keymap_introspection.o] Error 1                                
+Make finished with errors                                                                                                                                      
+make: *** [Makefile:392: handwired/wylderbuilds/5x6:vial] Error 1                                                                                              
+[Administrator@Alakuu ~]$                                                                                                                                      
