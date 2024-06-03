@@ -6,7 +6,7 @@
   "layouts": {
     "keymap": [
       {
-        "author": "6x6 track"
+        "name": "LAYOUT_6x6"
       },
       [
         "0,0",

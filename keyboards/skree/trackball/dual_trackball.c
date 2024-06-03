@@ -36,7 +36,7 @@ static void check_drag(report_mouse_t* mouse_report) {
         scroll_buffer_x = 0;
     }
     if (abs(scroll_buffer_y) > 6) {
-        mouse_report->v = scro;ll_buffer_y > 0 ? 1 : -1;
+        mouse_report->v = scroll_buffer_y > 0 ? 1 : -1;
         scroll_buffer_y = 0;
     }
 }
