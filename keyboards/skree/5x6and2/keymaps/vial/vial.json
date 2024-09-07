@@ -1,4 +1,8 @@
 {
+  "name": "5x6and2",
+  "vendorId": "0x9953",
+  "productId": "0x0002",
+  "lighting": "qmk_backlight",
   "matrix": {
     "rows": 12,
     "cols": 6
@@ -6,7 +10,7 @@
   "layouts": {
     "keymap": [
 		{
-		  "name": "Skree Custom Keyboards 5x6and2"
+		  "name": "5x6and2"
 		},
 		[
 		  "0,0",
