@@ -13,6 +13,7 @@ SLEEP_LED_ENABLE = no
 #
 OLED_ENABLE = yes
 OLED_DRIVER = ssd1306
+OLED_TRANSPORT = i2c
 WPM_ENABLE = yes
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 #

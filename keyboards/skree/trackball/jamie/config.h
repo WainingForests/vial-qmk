@@ -11,7 +11,7 @@
 
 
 #define USE_SERIAL
-#define SPLIT_HAND_PIN      GP26  // high = left, low = right
+#define SPLIT_HAND_PIN      GP22  // high = left, low = right
 #define SPLIT_LAYER_STATE_ENABLE
 
 
@@ -60,11 +60,11 @@
 //#define CHARYBDIS_SNIPING_DPI_CONFIG_STEP 200
 
 #ifdef ENCODER_ENABLE
-#define ENCODERS_PAD_A { GP22 }
+#define ENCODERS_PAD_A { GP16 }
 #define ENCODERS_PAD_B { GP27 }
 #define ENCODER_RESOLUTIONS { 2 }
 #define ENCODERS_PAD_A_RIGHT { GP22 }
-#define ENCODERS_PAD_B_RIGHT { GP27 }
+#define ENCODERS_PAD_B_RIGHT { GP17 }
 #define ENCODER_RESOLUTIONS_RIGHT { 2 }
 #endif
 
@@ -78,8 +78,8 @@
 // GP18 -- SCK pin clock Driver
 #ifdef OLED_ENABLE
 #define I2C_DRIVER I2CD0
-#define I2C1_SDA_PIN GP16
-#define I2C1_SCL_PIN GP17
+#define I2C1_SDA_PIN GP26
+#define I2C1_SCL_PIN GP27
 // OLED Options
 #define SPLIT_OLED_ENABLE
 #define SPLIT_WPM_ENABLE
