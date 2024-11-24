@@ -55,7 +55,7 @@
 // only required if not setting mouse layer elsewhere
 #define AUTO_MOUSE_DEFAULT_LAYER 3
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 4
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5
 
 //#define ENCODERS_PAD_A { }
 //#define ENCODERS_PAD_B { }
