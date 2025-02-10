@@ -8,31 +8,31 @@
 
 #endif // WYLD_QMK_FIRMWARE_CONFIG_H
 
-///#define USE_SERIAL
-///#define SPLIT_HAND_PIN      GP28  // high = left, low = right
+#define USE_SERIAL
+#define SPLIT_HAND_PIN      GP2  // high = left, low = right
 
 // Using Serial instead of I2C
-///#define SERIAL_USART_FULL_DUPLEX 
-///#define SERIAL_USART_TX_PIN GP0
-///#define SERIAL_USART_RX_PIN GP1
-///#define SERIAL_PIO_USE_PIO0
-///#define SERIAL_USART_TIMEOUT     100  // USART driver timeout. default 100
-///#define SERIAL_USART_SPEED 921600
-///#define SERIAL_USART_PIN_SWAP
+#define SERIAL_USART_FULL_DUPLEX 
+#define SERIAL_USART_TX_PIN GP0
+#define SERIAL_USART_RX_PIN GP1
+#define SERIAL_PIO_USE_PIO0
+#define SERIAL_USART_TIMEOUT     100  // USART driver timeout. default 100
+#define SERIAL_USART_SPEED 921600
+#define SERIAL_USART_PIN_SWAP
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED_MASK 0U
 
 /* key matrix size */
-// Columns are doubled-up
-#define MATRIX_ROWS 8
-#define MATRIX_COLS 5
+// Rows are doubled-up
+#define MATRIX_ROWS 10
+#define MATRIX_COLS 6
 
-#define MATRIX_COL_PINS { GP10, GP9, GP11, GP12, GP13 }
-// C1-7 GP10, GP9, GP11, GP12, GP13, GP14, GP22
-#define MATRIX_ROW_PINS { GP18, GP21, GP17, GP20 }
-// R1-7 GP18, GP21, GP17, GP20, GP16, GP19, GP15
+#define MATRIX_COL_PINS { GP14, GP15, GP26, GP27, GP28, GP29 }
+// C1-7 GP14, GP15, GP26, GP27, GP28, GP29, GP10
+#define MATRIX_ROW_PINS { GP9, GP6, GP7, GP8, GP12 }
+// R1-7 GP9, GP6, GP7, GP8, GP5, GP4, GP12*AlwaysTR
 #define DIODE_DIRECTION COL2ROW
 
 
@@ -50,27 +50,22 @@
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 5
 
-////#define SPLIT_TRANSACTION_IDS_KB RPC_ID_KB_CONFIG_SYNC
+#define SPLIT_TRANSACTION_IDS_KB RPC_ID_KB_CONFIG_SYNC
 
 //#define ENCODERS_PAD_A { }
 //#define ENCODERS_PAD_B { }
 //#define ENCODER_RESOLUTIONS { }
-//#define ENCODERS_PAD_A_RIGHT { GP10, GP22 }
-//#define ENCODERS_PAD_B_RIGHT { GP7, GP8 }
+//#define ENCODERS_PAD_A_RIGHT { GP17, GP13 }
+//#define ENCODERS_PAD_B_RIGHT { GP25, GP24 }
 //#define ENCODER_RESOLUTIONS_RIGHT { 2 }
 
 
 //// Sensor Notes ////
 //// Pi Pico pins ////
-// 3V3  -- Power (not 3v3_EN)
-// GP17 -- CS pin
-// GP20 -- MISO pin
-// GP19 -- MOSI pin
-// GP18 -- SCK pin clock Driver
 #ifdef OLED_ENABLE
 #define I2C_DRIVER I2CD0
-#define I2C1_SDA_PIN GP26
-#define I2C1_SCL_PIN GP27
+#define I2C1_SDA_PIN GP22
+#define I2C1_SCL_PIN GP23
 // OLED Options
 #define SPLIT_OLED_ENABLE
 #define SPLIT_WPM_ENABLE
@@ -88,12 +83,6 @@
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_MATRIX_KEYPRESSES
 
-//Joystick stuff
-// 0, max 32 
-#define JOYSTICK_BUTTON_COUNT 0 
-// Min 0, max 6: X, Y, Z, Rx, Ry, Rz 
-#define JOYSTICK_AXIS_COUNT 2
-
 // Misc settings
 // Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap
 #define LOCKING_SUPPORT_ENABLE
@@ -101,12 +90,12 @@
 #define LOCKING_RESYNC_ENABLE// Enables This makes it easier for fast typists to use dual-function keys
 #define PERMISSIVE_HOLD
 // End of Basic Config
-///#define SPLIT_LAYER_STATE_ENABLE
+#define SPLIT_LAYER_STATE_ENABLE
 
 #ifdef RGBLIGHT_ENABLE
-#define WS2812_DI_PIN GP8
-#define RGBLED_NUM 36
-///#define RGBLED_SPLIT { 18, 18 }
+#define WS2812_DI_PIN GP11
+#define RGBLED_NUM 76
+#define RGBLED_SPLIT { 38, 38 }
 #define RGBLIGHT_EFFECT_ALTERNATING
 #define RGBLIGHT_EFFECT_BREATHING
 #define RGBLIGHT_EFFECT_RAINBOW_MOOD
